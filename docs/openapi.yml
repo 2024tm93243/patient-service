@@ -1,0 +1,15 @@
+paths:
+  /v1/patients/{patient_id}:
+    get:
+      summary: Get patient by ID
+      parameters:
+        - name: patient_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Patient found
+        '404':
+          description: Patient not found
